@@ -423,12 +423,24 @@
         }
         .footer-name { color: var(--gold-light); font-weight: 700; }
 
-        @media (max-width: 640px) {
-            .hs { width: 38px; height: 38px; font-size: 12px; }
-            .edu-item { min-width: 82px; }
-            .modal-box { border-radius: 16px; }
-            .modal-header, .modal-body, .modal-footer { padding-left: 16px; padding-right: 16px; }
-        }
+       @media (max-width: 640px) {
+    .hs { width: 38px; height: 38px; font-size: 12px; }
+    .edu-item { min-width: 82px; }
+    .modal-box { border-radius: 16px; }
+    .modal-header, .modal-body, .modal-footer { padding-left: 16px; padding-right: 16px; }
+}
+
+@media (max-height: 768px) {
+    .hs { width: 38px; height: 38px; font-size: 12px; }
+    .modal-box { border-radius: 14px; }
+    .modal-header, .modal-body, .modal-footer { padding-top: 12px; padding-bottom: 12px; }
+}
+
+@media (max-height: 700px) {
+    .hs { width: 34px; height: 34px; font-size: 11px; }
+    .modal-box { border-radius: 12px; }
+    .modal-header, .modal-body, .modal-footer { padding-top: 8px; padding-bottom: 8px; }
+}
     </style>
 </head>
 <body>
@@ -646,7 +658,7 @@
                 <div class="video-wrapper">
                     <iframe id="video-frame"
                         src="about:blank"
-                        data-src="https://www.youtube.com/embed/ZvalFzneXso?si=ate0Lc1_A8qh4g9s"
+                        data-src="https://www.youtube.com/embed/YJo2ErTA-Hs?si=Djd74UWfWKq7ac4B"
                         allowfullscreen
                         allow="autoplay; encrypted-media">
                     </iframe>
@@ -675,7 +687,7 @@
         //  ⚙️  إعدادات — عدّل هنا فقط
         // ══════════════════════════════════════════
         const INFOGRAPHIC_SRC = '../img/t1u2.png';
-        const VIDEO_EMBED_URL = 'https://www.youtube.com/embed/OLq_uHLmplo?si=pTRPKYUYZjgh3SSY';
+        const VIDEO_EMBED_URL = 'https://www.youtube.com/embed/YJo2ErTA-Hs?si=Djd74UWfWKq7ac4B';
         const POST_TEST_src   = 't1unit2posttest.html'; // ← غيّر لرابط صفحة الاختبار البعدي
 
         const WAIT_SECONDS = { 1: 8, 2: 10 };
