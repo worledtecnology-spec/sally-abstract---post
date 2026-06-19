@@ -394,7 +394,8 @@
             font-size: 12px;
             color: var(--gold-light); font-weight: 700;
         }
-  @media (max-width: 640px) {
+  
+@media (max-width: 640px) {
     .hs { width: 38px; height: 38px; font-size: 12px; }
     .edu-item { min-width: 82px; }
     .modal-box { border-radius: 16px; }
@@ -413,11 +414,81 @@
     .modal-header, .modal-body, .modal-footer { padding-top: 8px; padding-bottom: 8px; }
 }
 
+        /* === كارت الفيديو === */
+        .card-body-wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .text-columns-side {
+            flex: 1;
+            min-width: 0;
+        }
+        .video-side {
+            flex: 0 0 300px;
+            background: var(--navy);
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border-right: 3px solid var(--gold);
+        }
+        .video-side-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold-light);
+            font-weight: 700;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(184,134,11,0.4);
+            padding-bottom: 8px;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid rgba(184,134,11,0.3);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: none;
+        }
+        .video-desc {
+            color: rgba(255,255,255,0.75);
+            font-size: 12px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .video-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--navy);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 0 auto;
+            width: fit-content;
+        }
+        @media (max-width: 900px) {
+            .card-body-wrapper { flex-direction: column; }
+            .video-side {
+                flex: none;
+                width: 100%;
+                border-right: none;
+                border-top: 3px solid var(--gold);
+            }
+        }
     </style>
 </head>
 <body>
 
-<div class="top-header">
+    <div class="top-header">
     بيئة تدريب مصغر لتنمية مهارات تصميم الاختبارات الإلكترونية وكفاءة الذات المهنية لدى معلمي المرحلة الإعدادية
 
     <span style="
@@ -432,7 +503,7 @@
         letter-spacing: 0.3px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         white-space: nowrap;
-    ">✦ بيئة تعلم مصغر — ملخص بعدي</span>
+    ">✦ بيئة تدريب مصغر — ملخص بعدي</span>
 </div>
 
     <nav class="main-nav">
@@ -458,7 +529,7 @@
     <div class="education-nav">
         <h1 class="section-title">الموضوع الأول</h1>
         <div class="edu-container">
-             
+            
             <a href="#" class="edu-item" target="_self"> 
                 <span class="edu-icon">📌</span>
                 <span class="edu-text">عنوان الوحدة</span>
@@ -483,7 +554,7 @@
                 <span class="edu-icon">🧩</span>
                 <span class="edu-text">النشاط التعليمي</span>
             </a>
-            <a href="#" class="edu-item" target="_self">
+             <a href="#" class="edu-item" target="_self">
                 <span class="edu-icon"></span>
                 <span class="edu-text">ملخص الوحدة</span>
             </a>
@@ -500,7 +571,9 @@
             <h2>محتوى الوحدة الخامسة: عيوب ومعوقات الاختبارات الإلكترونية   </h2>
         </div>
 
-        <div class="columns-wrapper">
+        <div class="card-body-wrapper">
+        <div class="text-columns-side">
+            <div class="columns-wrapper">
             
     <!-- العمود الأول -->
     <section class="content-col">
@@ -543,6 +616,20 @@
         </div>
     </section>
 </div>
+        </div><!-- end text-columns-side -->
+        <div class="video-side">
+            <div class="video-side-title"><span>🎬</span>فيديو الوحدة الخامسة</div>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/RFi0QHXVaeg?si=9jLAMHEE_fnKBsAs"
+                    title="فيديو الوحدة الخامسة"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <span class="video-badge">▶ شاهد الفيديو</span>
+        </div><!-- end video-side -->
+    </div><!-- end card-body-wrapper -->
 </body>
 </html>
 

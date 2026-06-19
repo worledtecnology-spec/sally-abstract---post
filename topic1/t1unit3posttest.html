@@ -267,7 +267,7 @@
 </head>
 <body>
 
-<div class="top-header">
+   <div class="top-header">
     بيئة تدريب مصغر لتنمية مهارات تصميم الاختبارات الإلكترونية وكفاءة الذات المهنية لدى معلمي المرحلة الإعدادية
 
     <span style="
@@ -282,21 +282,21 @@
         letter-spacing: 0.3px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         white-space: nowrap;
-    ">✦ بيئة تعلم مصغر — ملخص بعدي</span>
+    ">✦ بيئة تدريب مصغر — ملخص بعدي</span>
 </div>
 
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="../index.html" class="nav-item" target="_self">
+            <a href="../index.html" class="nav-item">
                 <span class="icon-symbol">🏠</span><span>الصفحة الرئيسية</span>
             </a>
-            <a href="../mods.html" class="nav-item" target="_self">
+            <a href="../mods.html" class="nav-item">
                 <span class="icon-symbol">📚</span><span>المحتوى التعليمي</span>
             </a>
-            <a href="../instruction.html" class="nav-item" target="_self">
+            <a href="../instruction.html" class="nav-item">
                 <span class="icon-symbol">📜</span><span>التعليمات</span>
             </a>
-            <a href="../contact.html" class="nav-item" target="_self">
+            <a href="../contact.html" class="nav-item">
                 <span class="icon-symbol">✉️</span><span>التواصل</span>
             </a>
         </div>
@@ -305,15 +305,14 @@
     <div class="education-nav">
         <h1 class="section-title">الموضوع الأول</h1>
         <div class="edu-container">
-            <a href="#" class="edu-item" target="_self"><span class="edu-icon">📌</span><span class="edu-text">عنوان الوحدة</span></a>
-            <a href="t1unit3aims.html" class="edu-item" target="_self"><span class="edu-icon">🎯</span><span class="edu-text">الهدف من الدراسة</span></a>
-            <a href="#" class="edu-item" target="_self"><span class="edu-icon">📝</span><span class="edu-text">الاختبار القبلي</span></a>
-            <a href="t1unit3content.html" class="edu-item" target="_self"><span class="edu-icon">📖</span><span class="edu-text">محتوى الوحدة</span></a>
-            <a href="t1unit3selftest.html" class="edu-item" target="_self"><span class="edu-icon">🧠</span><span class="edu-text">التقويم الذاتي</span></a>
-            <a href="t1unit3activity.html" class="edu-item" target="_self"><span class="edu-icon">🧩</span><span class="edu-text">النشاط التعليمي</span></a>
-            <a href="abstract t1unit3.html" class="edu-item"><span class="edu-icon" target="_self">📌</span><span class="edu-text">ملخص الوحدة</span></a>
-            <a href="#" class="edu-item"><span class="edu-icon" target="_self">🏆</span><span class="edu-text">الاختبار البعدي</span></a>
-
+            <a href="#" class="edu-item"><span class="edu-icon">📌</span><span class="edu-text">عنوان الوحدة</span></a>
+            <a href="t1unit3aims.html" class="edu-item"><span class="edu-icon">🎯</span><span class="edu-text">الهدف من الدراسة</span></a>
+            <a href="#" class="edu-item"><span class="edu-icon">📝</span><span class="edu-text">الاختبار القبلي</span></a>
+            <a href="t1unit3content.html" class="edu-item"><span class="edu-icon">📖</span><span class="edu-text">محتوى الوحدة</span></a>
+            <a href="t1unit3selftest.html" class="edu-item"><span class="edu-icon">🧠</span><span class="edu-text">التقويم الذاتي</span></a>
+            <a href="t1unit3activity.html" class="edu-item"><span class="edu-icon">🧩</span><span class="edu-text">النشاط التعليمي</span></a>
+             <a href="#" class="edu-item"><span class="edu-icon">📌</span><span class="edu-text">ملخص الوحدة</span></a>
+            <a href="#" class="edu-item"><span class="edu-icon">🏆</span><span class="edu-text">الاختبار البعدي</span></a>
             <!-- زر الوحدة الثانية — مقفل في البداية -->
             <a href="t1unit4.html" class="edu-item locked" id="unit2Btn">
                 <span class="edu-icon" id="unit2Icon">🔒</span>
@@ -446,7 +445,7 @@
                 sub   = "لقد أحسنت صنعاً، أنت تمتلك خلفية قوية عن الاختبارات الإلكترونية.";
             } else if (scorePct >= 50) {
                 title = "أداء جيد 👍";
-                sub   = "بداية موفقة، لكن تحتاج إلى مراجعة المحتوى جيداً للانتقال إلى الوحدة الثانية.";
+                sub   = "بداية موفقة، لكن تحتاج إلى مراجعة المحتوى جيداً للانتقال إلى الوحدة الرابعة.";
             } else {
                 title = "تحتاج إلى مزيد من الدراسة 📚";
                 sub   = "راجع محتوى الوحدة بعناية، ثم أعد الاختبار مجدداً.";
@@ -471,7 +470,7 @@
                 /* ❌ رسوب — الزر يبقى مقفلاً */
                 actionsEl.innerHTML = `
                     <div class="result-banner banner-retry">
-                        ⚠️ يجب الحصول على 80% على الأقل للانتقال إلى الوحدة الثانية — راجع المحتوى مرة أخرى
+                        ⚠️ يجب الحصول على 80% على الأقل للانتقال إلى الوحدة الرابعة — راجع المحتوى مرة أخرى
                     </div>
                     <br>
                     <button class="btn-retry" onclick="retryQuiz()">
@@ -486,7 +485,7 @@
             btn.classList.remove('locked');
             btn.classList.add('unlocked');
             document.getElementById('unit2Icon').textContent    = '🔓';
-            document.getElementById('unit2BtnText').textContent = 'الوحدة الثانية ✨';
+            document.getElementById('unit2BtnText').textContent = ' الوحدة الرابعة ✨';
         }
 
         /* ---- إعادة الاختبار ---- */

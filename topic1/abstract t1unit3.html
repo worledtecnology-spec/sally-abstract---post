@@ -130,7 +130,8 @@
             gap: 10px;
             padding: 0 3px;
         }
-.edu-icon { 
+
+        .edu-icon { 
     font-size: 13px; /* تصغير الأيقونة قليلاً لتناسب السطر */
 }
 
@@ -157,6 +158,7 @@
             transition: all 0.3s ease;
             border: 2px solid rgba(255,255,255,0.1);
         }
+
 
         .edu-item:not(.disabled):hover {
             background: var(--gold);
@@ -423,29 +425,17 @@
         }
         .footer-name { color: var(--gold-light); font-weight: 700; }
 
-       @media (max-width: 640px) {
-    .hs { width: 38px; height: 38px; font-size: 12px; }
-    .edu-item { min-width: 82px; }
-    .modal-box { border-radius: 16px; }
-    .modal-header, .modal-body, .modal-footer { padding-left: 16px; padding-right: 16px; }
-}
-
-@media (max-height: 768px) {
-    .hs { width: 38px; height: 38px; font-size: 12px; }
-    .modal-box { border-radius: 14px; }
-    .modal-header, .modal-body, .modal-footer { padding-top: 12px; padding-bottom: 12px; }
-}
-
-@media (max-height: 700px) {
-    .hs { width: 34px; height: 34px; font-size: 11px; }
-    .modal-box { border-radius: 12px; }
-    .modal-header, .modal-body, .modal-footer { padding-top: 8px; padding-bottom: 8px; }
-}
+        @media (max-width: 640px) {
+            .hs { width: 38px; height: 38px; font-size: 12px; }
+            .edu-item { min-width: 82px; }
+            .modal-box { border-radius: 16px; }
+            .modal-header, .modal-body, .modal-footer { padding-left: 16px; padding-right: 16px; }
+        }
     </style>
 </head>
 <body>
 
-    <<div class="top-header">
+    <div class="top-header">
     بيئة تدريب مصغر لتنمية مهارات تصميم الاختبارات الإلكترونية وكفاءة الذات المهنية لدى معلمي المرحلة الإعدادية
 
     <span style="
@@ -460,12 +450,12 @@
         letter-spacing: 0.3px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         white-space: nowrap;
-    ">✦ بيئة تعلم مصغر — ملخص بعدي</span>
+    ">✦ بيئة تدريب مصغر — ملخص بعدي</span>
 </div>
 
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="../index.html" class="nav-item" target="_self">🏠 <span>الرئيسية</span></a>
+            <a href="../index.html" class="nav-item">🏠 <span>الرئيسية</span></a>
             <a href="../mods.html" class="nav-item">📚 <span>المحتوى</span></a>
             <a href="../instruction.html" class="nav-item">📜 <span>التعليمات</span></a>
             <a href="../contact.html" class="nav-item">✉️ <span>التواصل</span></a>
@@ -475,45 +465,39 @@
     <div class="education-nav">
         <h1 class="section-title">الموضوع الأول</h1>
         <div class="edu-container">
-
-            <!-- ✅ جميع العناصر مفعّلة -->
-            <a href="t1unit3.html" class="edu-item" target="_self">
+           
+            <a href="#" class="edu-item disabled locked-item">
                 <span class="edu-icon">🎯</span>
                 <span class="edu-text">عنوان الوحدة</span>
             </a>
-            <a href="t1unit3aims.html" class="edu-item" target="_self">
+            <a href="#" class="edu-item disabled locked-item">
                 <span class="edu-icon">🎯</span>
                 <span class="edu-text">الهدف من الدراسة</span>
             </a>
-            <a href="#" class="edu-item" target="_self">
+            <a href="#" class="edu-item disabled locked-item">
                 <span class="edu-icon">📝</span>
                 <span class="edu-text">الاختبار القبلي</span>
             </a>
-            <a href="t1unit3content.html" class="edu-item" target="_self">
+            <a href="#" class="edu-item disabled locked-item">
                 <span class="edu-icon">📖</span>
                 <span class="edu-text">محتوى الوحدة</span>
             </a>
-            <a href="t1unit3selftest.html" class="edu-item" target="_self">
+            <a href="#" class="edu-item disabled locked-item">
                 <span class="edu-icon">🧠</span>
                 <span class="edu-text">التقويم الذاتي</span>
             </a>
-            <a href="t1unit3activity.html" class="edu-item" target="_self">
+            <a href="#" class="edu-item disabled locked-item">
                 <span class="edu-icon">🧩</span>
                 <span class="edu-text">النشاط التعليمي</span>
             </a>
-
-            <!-- الصفحة الحالية -->
-            <a href="#" class="edu-item active-summary" target="_self">
+             <a href="#" class="edu-item active-summary" id="summary-link">
                 <span class="edu-icon">📌</span>
                 <span class="edu-text">ملخص الوحدة</span>
             </a>
-
-            <!-- 🔒 الاختبار البعدي — مقيّد حتى اكتمال مشاهدة الملخص -->
-            <a href="t1unit3posttest.html" class="edu-item disabled" id="post-test-link" target="_self">
+            <a href="t1unit3posttest.html" class="edu-item disabled locked-item">
                 <span class="edu-icon">🏆</span>
                 <span class="edu-text">الاختبار البعدي</span>
             </a>
-
         </div>
     </div>
 
@@ -556,7 +540,7 @@
                 <circle cx="400" cy="258" r="265" fill="none" stroke="rgba(255,255,255,0.018)" stroke-width="1"/>
 
                 <rect x="180" y="14" width="540" height="45" rx="11" fill="rgba(21,38,80,0.9)" stroke="rgba(212,160,23,0.3)" stroke-width="1"/>
-                <text x="400" y="45" text-anchor="middle" fill="#d4a017" font-family="'Amiri',serif" font-size="26" font-weight="700">الإنفوجرافيك التفاعلي للوحدة المصغرة الأولى</text>
+                <text x="400" y="45" text-anchor="middle" fill="#d4a017" font-family="'Amiri',serif" font-size="26" font-weight="700">الإنفوجرافيك التفاعلي للوحدة المصغرة الثالثة</text>
 
                 <path class="flow-line" d="M 330,222 C 268,200 215,180 168,164" fill="none" stroke="#b8860b" stroke-width="2" stroke-dasharray="9 6" opacity="0.6" marker-end="url(#arr-g)"/>
                 <path class="flow-line" d="M 470,222 C 532,200 585,180 632,164" fill="none" stroke="#2980d4" stroke-width="2" stroke-dasharray="9 6" opacity="0.6" marker-end="url(#arr-b)"/>
@@ -576,6 +560,7 @@
                 <circle cx="320" cy="327" r="4.5" fill="#d4a017" opacity="0.45"/>
                 <circle cx="480" cy="327" r="4.5" fill="#d4a017" opacity="0.45"/>
 
+                <!-- NODE 1 – Gold (Infographic) -->
                 <rect x="30" y="68" width="220" height="163" rx="12" fill="rgba(184,134,11,0.1)" stroke="rgba(184,134,11,0.22)" stroke-width="6"/>
                 <rect x="30" y="74" width="220" height="151" rx="17" fill="url(#g-gold)" stroke="#b8860b" stroke-width="6.5"/>
                 <rect x="30" y="74" width="220" height="38" rx="17" fill="#8a6000"/>
@@ -583,6 +568,7 @@
                 <rect x="30" y="81" width="26" height="17" rx="5" fill="rgba(255,255,255,0.18)"/>
                 <text x="130" y="99" text-anchor="middle" fill="rgba(255,255,255,0.88)" font-family="'Cairo'" font-size="18" font-weight="700">انفوجرافيك ملخص</text>
 
+                <!-- NODE 2 – Blue (Video) -->
                 <rect x="562" y="68" width="220" height="163" rx="12" fill="rgba(30,95,168,0.1)" stroke="rgba(30,95,168,0.22)" stroke-width="6"/>
                 <rect x="562" y="74" width="220" height="151" rx="17" fill="url(#g-blue)" stroke="#1e5fa8" stroke-width="6.5"/>
                 <rect x="562" y="74" width="220" height="38" rx="17" fill="#1e5fa8"/>
@@ -591,17 +577,23 @@
                 <text x="672" y="99" text-anchor="middle" fill="rgba(255,255,255,0.88)" font-family="'Cairo'" font-size="18" font-weight="700">فيديو ملخص</text>
             </svg>
 
+            <!-- HOTSPOT BUTTONS -->
+            <!-- hs1 = الانفوجرافيك (زر 01) - Node on the LEFT side of SVG = left: 18.75% -->
             <button class="hs hs1" id="hs1" onclick="openModal(1)" aria-label="عرض انفوجرافيك الملخص">1</button>
+            <!-- hs2 = الفيديو (زر 02) - Node on the RIGHT side of SVG = left: 81.25% -->
             <button class="hs hs2" id="hs2" onclick="openModal(2)" aria-label="عرض فيديو الملخص">2</button>
         </div>
 
+        <!-- SUCCESS BANNER -->
         <div class="succ" id="succ">
             <span class="succ-icon">🏆</span>
-            <p class="succ-t">أحسنت! اطلعت على الملخص كاملاً — تم تفعيل الاختبار البعدي. يمكنك الانتقال إليه الآن.</p>
+            <p class="succ-t">أحسنت! اطلعت على الملخص كاملاً — تم تفعيل جميع عناصر الوحدة. يمكنك الانتقال إليها الآن.</p>
         </div>
     </main>
 
-    <!-- MODAL – INFOGRAPHIC -->
+    <!-- ════════════════════════════════════════════
+         MODAL – INFOGRAPHIC (id=1)
+    ════════════════════════════════════════════ -->
     <div class="modal-overlay" id="modal-1">
         <div class="modal-box">
             <div class="modal-header">
@@ -615,6 +607,7 @@
             </div>
             <div class="modal-body">
                 <div class="image-wrapper" id="infographic-container">
+                    <!-- ضع رابط صورة الانفوجرافيك هنا بدلاً من النص التوضيحي -->
                     <div class="img-placeholder">
                         <div class="img-placeholder-icon">🖼️</div>
                         <div class="img-placeholder-text">
@@ -622,6 +615,7 @@
                             <span style="font-size:11px; opacity:.6;">(ضع رابط صورة الانفوجرافيك في متغير <code>INFOGRAPHIC_SRC</code> في الكود)</span>
                         </div>
                     </div>
+                    <!-- سيتم استبدال المحتوى أعلاه تلقائياً إذا كان رابط الصورة محدداً -->
                 </div>
             </div>
             <div class="modal-footer">
@@ -642,7 +636,9 @@
         </div>
     </div>
 
-    <!-- MODAL – VIDEO -->
+    <!-- ════════════════════════════════════════════
+         MODAL – VIDEO (id=2)
+    ════════════════════════════════════════════ -->
     <div class="modal-overlay" id="modal-2">
         <div class="modal-box">
             <div class="modal-header">
@@ -656,6 +652,7 @@
             </div>
             <div class="modal-body">
                 <div class="video-wrapper">
+                    <!-- غيّر الرابط هنا إلى فيديو يوتيوب الخاص بك -->
                     <iframe id="video-frame"
                         src="about:blank"
                         data-src="https://www.youtube.com/embed/oQBST1pKdDg?si=tMwa3C9CTnqmpnvv"
@@ -681,113 +678,129 @@
             </div>
         </div>
     </div>
+<script>
+    // ══════════════════════════════════════════
+    //  ⚙️  إعدادات — عدّل هنا فقط
+    // ══════════════════════════════════════════
+    const INFOGRAPHIC_SRC = '../img/t1u3.png'; // ضع رابط صورة الانفوجرافيك هنا، مثال: 'infographic.jpg'
+    const VIDEO_EMBED_URL  = 'https://www.youtube.com/embed/oQBST1pKdDg?si=tMwa3C9CTnqmpnvv'; // رابط تضمين يوتيوب
 
-    <script>
-        // ══════════════════════════════════════════
-        //  ⚙️  إعدادات — عدّل هنا فقط
-        // ══════════════════════════════════════════
-        const INFOGRAPHIC_SRC = '../img/t1u3.png';
-        const VIDEO_EMBED_URL = 'https://www.youtube.com/embed/oQBST1pKdDg?si=tMwa3C9CTnqmpnvv';
-        const POST_TEST_src   = 't1unit3posttest.html'; // ← غيّر لرابط صفحة الاختبار البعدي
+    // وقت الانتظار قبل تفعيل زر التأكيد (بالثواني)
+    const WAIT_SECONDS = { 1: 8, 2: 10 };
+    // ══════════════════════════════════════════
 
-        const WAIT_SECONDS = { 1: 8, 2: 10 };
-        // ══════════════════════════════════════════
+    const viewed   = { 1: false, 2: false };
+    let   timers   = {};
 
-        const viewed = { 1: false, 2: false };
-        let timers   = {};
+    // تهيئة صورة الانفوجرافيك إذا كان الرابط محدداً
+    if (INFOGRAPHIC_SRC) {
+        document.getElementById('infographic-container').innerHTML =
+            `<img src="${INFOGRAPHIC_SRC}" alt="انفوجرافيك الملخص" onerror="this.parentNode.innerHTML='<div class=img-placeholder><div class=img-placeholder-icon>⚠️</div><div class=img-placeholder-text>تعذّر تحميل الصورة</div></div>'">`;
+    }
 
-        if (INFOGRAPHIC_SRC) {
-            document.getElementById('infographic-container').innerHTML =
-                `<img src="${INFOGRAPHIC_SRC}" alt="انفوجرافيك الملخص"
-                    onerror="this.parentNode.innerHTML='<div class=img-placeholder><div class=img-placeholder-icon>⚠️</div><div class=img-placeholder-text>تعذّر تحميل الصورة</div></div>'">`;
-        }
+    function openModal(id) {
+        if (viewed[id]) return; // سبق الاطلاع
 
-        function openModal(id) {
-            if (viewed[id]) return;
-            if (id === 2) {
-                const frame = document.getElementById('video-frame');
-                if (frame.src === 'about:blank') {
-                    frame.src = frame.dataset.src || VIDEO_EMBED_URL;
-                }
-            }
-            document.getElementById('modal-' + id).classList.add('open');
-            document.body.style.overflow = 'hidden';
-            startTimer(id);
-        }
-
-        function startTimer(id) {
-            const total = WAIT_SECONDS[id];
-            const fill  = document.getElementById('timer-fill-' + id);
-            const txt   = document.getElementById('timer-txt-' + id);
-            const btn   = document.getElementById('confirm-btn-' + id);
-            const icon  = document.getElementById('confirm-icon-' + id);
-            const label = document.getElementById('confirm-txt-' + id);
-
-            let elapsed = 0;
-            clearInterval(timers[id]);
-
-            timers[id] = setInterval(() => {
-                elapsed += 0.1;
-                const pct = Math.min((elapsed / total) * 100, 100);
-                fill.style.width = pct + '%';
-                const remaining = Math.ceil(total - elapsed);
-                if (remaining > 0) {
-                    txt.textContent   = `${remaining} ث متبقية`;
-                    label.textContent = `يرجى الانتظار (${remaining}ث)...`;
-                } else {
-                    clearInterval(timers[id]);
-                    txt.textContent   = 'جاهز ✓';
-                    label.textContent = 'تأكيد الاطلاع';
-                    icon.textContent  = '✓';
-                    btn.disabled      = false;
-                }
-            }, 100);
-        }
-
-        function confirmView(id) {
-            viewed[id] = true;
-
-            if (id === 2) {
-                const frame    = document.getElementById('video-frame');
-                const savedSrc = frame.src;
-                frame.src      = 'about:blank';
-                frame.dataset.src = savedSrc;
-            }
-
-            document.getElementById('modal-' + id).classList.remove('open');
-            document.body.style.overflow = '';
-
-            const hs = document.getElementById('hs' + id);
-            hs.classList.add('done');
-            hs.textContent = '✓';
-
-            document.getElementById('pip' + id).classList.add('done');
-
-            checkCompletion();
-        }
-
-        function checkCompletion() {
-            if (viewed[1] && viewed[2]) {
-                // ✅ تفعيل الاختبار البعدي فقط
-                const postTest = document.getElementById('post-test-link');
-                postTest.classList.remove('disabled');
-                postTest.href = POST_TEST_URL;
-
-                document.getElementById('succ').classList.add('show');
-                const instr = document.getElementById('instr');
-                instr.textContent = '🏆 أحسنت! تم تفعيل الاختبار البعدي — يمكنك الانتقال إليه الآن';
-                instr.classList.add('done');
+        // تحميل الفيديو عند الفتح فقط (لتفادي التشغيل التلقائي)
+        if (id === 2) {
+            const frame = document.getElementById('video-frame');
+            if (frame.src === 'about:blank') {
+                frame.src = frame.dataset.src || VIDEO_EMBED_URL;
             }
         }
 
-        // منع إغلاق المودال بالضغط على الخلفية
-        document.querySelectorAll('.modal-overlay').forEach(overlay => {
-            overlay.addEventListener('click', function(e) {
-                if (e.target === this) {
-                    // مقفول — لا يُغلق إلا بزر التأكيد
-                }
+        document.getElementById('modal-' + id).classList.add('open');
+        document.body.style.overflow = 'hidden';
+
+        startTimer(id);
+    }
+
+    function startTimer(id) {
+        const total   = WAIT_SECONDS[id];
+        const fill    = document.getElementById('timer-fill-' + id);
+        const txt     = document.getElementById('timer-txt-' + id);
+        const btn     = document.getElementById('confirm-btn-' + id);
+        const icon    = document.getElementById('confirm-icon-' + id);
+        const label   = document.getElementById('confirm-txt-' + id);
+
+        let elapsed = 0;
+        clearInterval(timers[id]);
+
+        timers[id] = setInterval(() => {
+            elapsed += 0.1;
+            const pct = Math.min((elapsed / total) * 100, 100);
+            fill.style.width = pct + '%';
+
+            const remaining = Math.ceil(total - elapsed);
+            if (remaining > 0) {
+                txt.textContent   = `${remaining} ث متبقية`;
+                label.textContent = `يرجى الانتظار (${remaining}ث)...`;
+            } else {
+                clearInterval(timers[id]);
+                txt.textContent   = 'جاهز ✓';
+                label.textContent = 'تأكيد الاطلاع';
+                icon.textContent  = '✓';
+                btn.disabled      = false;
+            }
+        }, 100);
+    }
+
+    function confirmView(id) {
+        viewed[id] = true;
+
+        // إيقاف الفيديو عند الإغلاق (عبر إعادة تحميل الـ src)
+        if (id === 2) {
+            const frame = document.getElementById('video-frame');
+            const savedSrc = frame.src;
+            frame.src = 'about:blank';
+            // لاحقاً عند إعادة الفتح، سيُعاد التحميل من data-src
+            frame.dataset.src = savedSrc;
+        }
+
+        // إغلاق المودال
+        document.getElementById('modal-' + id).classList.remove('open');
+        document.body.style.overflow = '';
+
+        // تعليم الزر كمكتمل
+        const btn = document.getElementById('hs' + id);
+        btn.classList.add('done');
+        btn.textContent = '✓';
+
+        // تحديث النقطة
+        document.getElementById('pip' + id).classList.add('done');
+
+        checkCompletion();
+    }
+
+    function checkCompletion() {
+        if (viewed[1] && viewed[2]) {
+            // فتح عناصر الوحدة
+            document.querySelectorAll('.locked-item').forEach(el => {
+                el.classList.remove('disabled', 'locked-item');
             });
+            // إظهار رسالة النجاح
+            document.getElementById('succ').classList.add('show');
+            const instr = document.getElementById('instr');
+            instr.textContent = '🏆 أحسنت! تم تفعيل جميع عناصر الوحدة';
+            instr.classList.add('done');
+        }
+    }
+
+    // إغلاق المودال عند الضغط على الخلفية (منع الإغلاق إذا لم يكتمل الوقت)
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === this) {
+                const id = parseInt(this.id.split('-')[1]);
+                // لا نسمح بالإغلاق إلا إذا أصبح الزر مفعّلاً
+                const btn = document.getElementById('confirm-btn-' + id);
+                if (!btn.disabled) {
+                    // يمكن الإغلاق بدون تأكيد فقط إذا أُكمل الوقت
+                    // لكن نمنع ذلك لإجبار المستخدم على الضغط على زر التأكيد
+                    // يمكنك حذف هذا التعليق وإزالة الشرط إذا أردت السماح بالإغلاق
+                }
+            }
         });
-    </script>
+    });
+</script>
 </body>
 </html>

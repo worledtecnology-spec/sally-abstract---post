@@ -208,7 +208,7 @@
             font-size: 14px;
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 10px;
         }
         .quiz-option:hover:not(.correct-flash):not(.wrong-flash) {
             border-color: var(--gold);
@@ -308,7 +308,12 @@
             cursor: pointer; transition: all 0.3s;
         }
         .btn-retry:hover { background: #ffc107; color: #000; }
-@media (max-width: 640px) {
+
+        .main-footer {
+            background: var(--navy); color: var(--gold-light);
+            text-align: center; padding: 15px 0; font-size: 13px; font-weight: 700;
+        }
+        @media (max-width: 640px) {
     .hs { width: 38px; height: 38px; font-size: 12px; }
     .edu-item { min-width: 82px; }
     .modal-box { border-radius: 16px; }
@@ -330,7 +335,7 @@
 </head>
 <body>
 
-<div class="top-header">
+    <div class="top-header">
     بيئة تدريب مصغر لتنمية مهارات تصميم الاختبارات الإلكترونية وكفاءة الذات المهنية لدى معلمي المرحلة الإعدادية
 
     <span style="
@@ -345,41 +350,41 @@
         letter-spacing: 0.3px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.25);
         white-space: nowrap;
-    ">✦ بيئة تعلم مصغر — ملخص بعدي</span>
+    ">✦ بيئة تدريب مصغر — ملخص بعدي</span>
 </div>
 
     <nav class="main-nav">
         <div class="nav-container">
-            <a href="../index.html" class="nav-item" target="_self">
+            <a href="../index.html" class="nav-item">
                 <span class="icon-symbol">🏠</span><span>الصفحة الرئيسية</span>
             </a>
-            <a href="../mods.html" class="nav-item" target="_self">
+            <a href="../mods.html" class="nav-item">
                 <span class="icon-symbol">📚</span><span>المحتوى التعليمي</span>
             </a>
-            <a href="../instruction.html" class="nav-item" target="_self">
+            <a href="../instruction.html" class="nav-item">
                 <span class="icon-symbol">📜</span><span>التعليمات</span>
             </a>
-            <a href="../contact.html" class="nav-item" target="_self">
+            <a href="../contact.html" class="nav-item">
                 <span class="icon-symbol">✉️</span><span>التواصل</span>
             </a>
         </div>
     </nav>
 
     <div class="education-nav">
-        <h1 class="section-title">الموضوع الأول</h1>
+        <h1 class="section-title">الموضوع الثالث</h1>
         <div class="edu-container">
-            <a href="#" class="edu-item" target="_self"><span class="edu-icon">📌</span><span class="edu-text">عنوان الوحدة</span></a>
-            <a href="t1unit4aims.html" class="edu-item" target="_self"><span class="edu-icon">🎯</span><span class="edu-text">الهدف من الدراسة</span></a>
-            <a href="#" class="edu-item"><span class="edu-icon" target="_self">📝</span><span class="edu-text">الاختبار القبلي</span></a>
-            <a href="t1unit4content.html" class="edu-item" target="_self"><span class="edu-icon">📖</span><span class="edu-text">محتوى الوحدة</span></a>
-            <a href="t1unit4selftest.html" class="edu-item" target="_self"><span class="edu-icon">🧠</span><span class="edu-text">التقويم الذاتي</span></a>
-            <a href="t1unit4activity.html" class="edu-item" target="_self"><span class="edu-icon">🧩</span><span class="edu-text">النشاط التعليمي</span></a>
-            <a href="abstract t1unit4.html" class="edu-item" target="_self"><span class="edu-icon">📌</span><span class="edu-text">ملخص الوحدة</span></a>
-            <a href="#" class="edu-item"><span class="edu-icon" target="_self">🏆</span><span class="edu-text">الاختبار البعدي</span></a>
+            <a href="#" class="edu-item"><span class="edu-icon">📌</span><span class="edu-text">عنوان الوحدة</span></a>
+            <a href="t3unit2aims.html" class="edu-item"><span class="edu-icon">🎯</span><span class="edu-text">الهدف من الدراسة</span></a>
+            <a href="#" class="edu-item"><span class="edu-icon">📝</span><span class="edu-text">الاختبار القبلي</span></a>
+            <a href="t3unit2content.html" class="edu-item"><span class="edu-icon">📖</span><span class="edu-text">محتوى الوحدة</span></a>
+            <a href="t3unit2selftest.html" class="edu-item"><span class="edu-icon">🧠</span><span class="edu-text">التقويم الذاتي</span></a>
+            <a href="t3unit2activity.html" class="edu-item"><span class="edu-icon">🧩</span><span class="edu-text">النشاط التعليمي</span></a>
+            <a href="#" class="edu-item"><span class="edu-icon">📌</span><span class="edu-text">ملخص الوحدة</span></a>
+            <a href="#" class="edu-item"><span class="edu-icon">🏆</span><span class="edu-text">الاختبار البعدي</span></a>
 
-            <a href="t1unit5.html" class="edu-item locked" id="unit2Btn">
+            <a href="t3unit3.html" class="edu-item locked" id="unit2Btn">
                 <span class="edu-icon" id="unit2Icon">🔒</span>
-                <span class="edu-text" id="unit2BtnText">الوحدة الخامسة</span>
+                <span class="edu-text" id="unit2BtnText">الوحدة الثالثة</span>
             </a>
         </div>
     </div>
@@ -421,32 +426,28 @@
         </div>
     </main>
     <script>
-        /* حروف الخيارات أ ب ج د */
-        const LABELS = ['أ', 'ب', 'ج', 'د'];
-
-        /* ✏️ الأسئلة — correct = رقم الخيار الصحيح (0=أ، 1=ب، 2=ج، 3=د) */
-       const questions = [
-    {
-        text: "1. الميزة الأساسية في استخدام Google Forms لأنشاء الاختبارات الإلكترونية.................  ",
-        options: [
-            "إمكانية تصحيح الإجابات تلقائيًا",
-            "يعتمد فقط على الأسئلة المقالية   ",
-            "لا يمكن مشاركة الاختبار عبر الأنترنت ",
-            "يتطلب اشتراكًا مدفوعًا  "
-        ],
-        correct: 0
-    },
-    {
-        text: "2. أي من التطبيقات التالية يُستخدم لأنشاء اختبارات على شكل ألعاب تعليمية................. ",
-        options: [
-            "Microsoft For   ",
-            "Google Form  ",
-            " Moodle  ",
-            "Kahoot "
-        ],
-        correct: 3
-    }
-];
+            const questions = [
+            {
+                text: "1. 	من الأفضل أن تتضمن الأسئلة مستويات معرفية مختلفة، مثل التذكر، الفهم، والتطبيق",
+                options: ["√ صحيح", "× خطأ"],
+                correct: 0
+            },
+            {
+                text: "2.	يجب أن تكون أسئلة الاختبار واضحة وخالية من الغموض ",
+                options: ["√ صحيح", "× خطأ"],
+                correct: 0
+            },
+            {
+                text: "3. 	يجب أن تكون مدة الاختبار مناسبة لعدد الأسئلة وطبيعتها",
+                options: ["√ صحيح", "× خطأ"],
+                correct: 0
+            },
+            {
+                text: "4. 	يمكن استخدام عبارات مثل دائمًا وأبدا في أسئلة صح وخطأ دون مشكلة",
+                options: ["√ صحيح", "× خطأ"],
+                correct: 1
+            }
+        ];
 
         let current = 0;
         let answers = new Array(questions.length).fill(null);
@@ -458,28 +459,21 @@
 
             document.getElementById('qText').textContent    = q.text;
             document.getElementById('qCounter').textContent = `السؤال ${current + 1} من ${total}`;
-
             const pct = Math.round(((current + 1) / total) * 100);
             document.getElementById('qPercent').textContent     = pct + '%';
             document.getElementById('progressFill').style.width = pct + '%';
 
             const grid = document.getElementById('optionsGrid');
             grid.innerHTML = '';
-
             q.options.forEach((opt, i) => {
                 const div = document.createElement('div');
-                let cls   = '';
-
+                let cls = '';
                 if (answers[current] !== null) {
                     if (i === q.correct)             cls = ' correct-flash';
                     else if (answers[current] === i) cls = ' wrong-flash';
                 }
-
                 div.className = 'quiz-option' + cls;
-                div.innerHTML = `
-                    <span class="option-indicator">${LABELS[i]}</span>
-                    <span>${opt}</span>`;
-
+                div.innerHTML = `<span class="option-indicator">${i === 0 ? 'أ' : 'ب'}</span><span>${opt}</span>`;
                 div.onclick = () => {
                     if (answers[current] === null) {
                         answers[current] = i;
@@ -506,23 +500,25 @@
             document.getElementById('quizContent').style.display = 'none';
             document.getElementById('quizResult').style.display  = 'block';
 
-            const correctCount = answers.filter((a, i) => a === questions[i].correct).length;
-            const scorePct     = Math.round((correctCount / questions.length) * 100);
-            const passed       = scorePct >= 80;
+            const correct  = answers.filter((a, i) => a === questions[i].correct).length;
+            const scorePct = Math.round((correct / questions.length) * 100);
+            const passed   = scorePct >= 80;
 
             document.getElementById('resultPercent').textContent = scorePct + '%';
 
+            /* لون دائرة النتيجة */
             const circle = document.getElementById('resultCircle');
             circle.style.borderColor = passed ? 'var(--success)' : 'var(--danger)';
             circle.style.color       = passed ? 'var(--success)' : 'var(--danger)';
 
+            /* نص النتيجة */
             let title, sub;
             if (scorePct >= 80) {
                 title = "أداء متميز! 🌟";
                 sub   = "لقد أحسنت صنعاً، أنت تمتلك خلفية قوية عن الاختبارات الإلكترونية.";
             } else if (scorePct >= 50) {
                 title = "أداء جيد 👍";
-                sub   = "بداية موفقة، لكن تحتاج إلى مراجعة المحتوى جيداً للانتقال إلى الوحدة الخامسة.";
+                sub   = "بداية موفقة، لكن تحتاج إلى مراجعة المحتوى جيداً للانتقال إلى الوحدة الثانية.";
             } else {
                 title = "تحتاج إلى مزيد من الدراسة 📚";
                 sub   = "راجع محتوى الوحدة بعناية، ثم أعد الاختبار مجدداً.";
@@ -533,18 +529,21 @@
             const actionsEl = document.getElementById('resultActions');
 
             if (passed) {
-                unlockUnit2();
+                /* ✅ نجاح — فتح الوحدة الثالثة */
+                unlockUnit3();
                 actionsEl.innerHTML = `
                     <div class="result-banner banner-success">
-                        🎉 ممتاز! يمكنك الآن الانتقال إلى دراسة الوحدة الخامسة
+                        🎉 ممتاز! يمكنك الآن الانتقال إلى دراسة الوحدة الثالثة
                     </div>
                     <br>
-                    
+                    <a href="t3unit3.html" class="btn-goto-unit3">
+                      
                     </a>`;
             } else {
+                /* ❌ رسوب — الزر يبقى مقفلاً */
                 actionsEl.innerHTML = `
                     <div class="result-banner banner-retry">
-                        ⚠️ يجب الحصول على 80% على الأقل للانتقال إلى الوحدة الخامسة — راجع المحتوى مرة أخرى
+                        ⚠️ يجب الحصول على 80% على الأقل للانتقال إلى الوحدة الثانية — راجع المحتوى مرة أخرى
                     </div>
                     <br>
                     <button class="btn-retry" onclick="retryQuiz()">
@@ -557,8 +556,8 @@
             const btn = document.getElementById('unit2Btn');
             btn.classList.remove('locked');
             btn.classList.add('unlocked');
-            document.getElementById('unit2Icon').textContent    = '🔓';
-            document.getElementById('unit2BtnText').textContent = 'الوحدة الخامسة ✨';
+            document.getElementById('unit3Icon').textContent    = '🔓';
+            document.getElementById('unit3BtnText').textContent = 'الوحدة الثالثة ✨';
         }
 
         function retryQuiz() {
