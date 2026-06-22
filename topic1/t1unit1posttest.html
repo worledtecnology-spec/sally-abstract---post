@@ -267,7 +267,7 @@
 </head>
 <body>
 
-    <div class="top-header">
+   <div class="top-header">
     بيئة تدريب مصغر لتنمية مهارات تصميم الاختبارات الإلكترونية وكفاءة الذات المهنية لدى معلمي المرحلة الإعدادية
 
     <span style="
@@ -359,7 +359,7 @@
         </div>
     </main>
     <script>
-        const questions = [
+       const questions = [
             {
                 text: "الاختبارات الإلكترونية توفر نتائج فورية مقارنة بالاختبارات التقليدية.",
                 options: ["√ صحيح", "× خطأ"],
@@ -376,6 +376,7 @@
                 correct: 0
             }
         ];
+
 
         let current = 0;
         let answers = new Array(questions.length).fill(null);
@@ -486,7 +487,7 @@
             btn.classList.remove('locked');
             btn.classList.add('unlocked');
             document.getElementById('unit2Icon').textContent    = '🔓';
-            document.getElementById('unit2BtnText').textContent = 'الوحدة الثانية ✨';
+            document.getElementById('unit2BtnText').textContent = ' الوحدة الثانية ✨';
         }
 
         /* ---- إعادة الاختبار ---- */
