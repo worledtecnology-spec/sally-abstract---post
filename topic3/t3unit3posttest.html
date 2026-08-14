@@ -312,10 +312,10 @@
             <a href="t3unit3selftest.html" class="edu-item"><span class="edu-icon">🧠</span><span class="edu-text">التقويم الذاتي</span></a>
             <a href="t3unit3activity.html" class="edu-item"><span class="edu-icon">🧩</span><span class="edu-text">النشاط التعليمي</span></a>
             <a href="#" class="edu-item"><span class="edu-icon">📌</span><span class="edu-text">ملخص الوحدة</span></a>
-            <a href="#" class="edu-item"><span class="edu-icon">🏆</span><span class="edu-text">الاختبار البعدي</span></a>
+            <a href="t3unit3posttest.html" class="edu-item"><span class="edu-icon">🏆</span><span class="edu-text">الاختبار البعدي</span></a>
 
             <!-- زر الوحدة الرابعة — مقفل في البداية -->
-            <a href="t3unit4.html" class="edu-item locked" id="unit4Btn">
+            <a href="abstract t3unit4.html" class="edu-item locked" id="unit4Btn">
                 <span class="edu-icon" id="unit4Icon">🔒</span>
                 <span class="edu-text" id="unit4BtnText">الوحدة الرابعة</span>
             </a>
@@ -365,7 +365,27 @@
         /* ✏️ الأسئلة — correct = رقم الخيار الصحيح (0=أ، 1=ب، 2=ج، 3=د) */
        const questions = [
     {
-        text: "1. من تصنيفات بلوم الذى يُستخدم عند تصميم جدول المواصفات...................................  ",
+        text: "1. ما المقصود بجدول المواصفات؟",
+        options: [
+            "قائمة بأسماء الطلاب",
+            "مخطط يوضح توزيع أسئلة الاختبار",
+            "برنامج لتصحيح الاختبارات",
+            "نموذج للإجابات فقط"
+        ],
+        correct: 1
+    },
+    {
+        text: "2. أي من الآتي يُعد من فوائد جدول المواصفات؟",
+        options: [
+            "تقليل عدد الأسئلة",
+            "ضمان تغطية جميع أجزاء المنهج بعدالة",
+            "إلغاء مستويات التفكير",
+            "زيادة زمن الاختبار فقط"
+        ],
+        correct: 1
+    },
+    {
+        text: "3. من تصنيفات بلوم الذى يُستخدم عند تصميم جدول المواصفات...................................  ",
         options: [
             "التذكر، الفهم، التطبيق، التحليل، التقييم   ",
             "القراءة، الكتابة، الحفظ، الإملاء  ",
@@ -375,7 +395,7 @@
         correct: 0
     },
     {
-        text: "2. الهدف الأساسي من استخدام جدول المواصفات في إنشاء الاختبارات.................... ",
+        text: "4. الهدف الأساسي من استخدام جدول المواصفات في إنشاء الاختبارات.................... ",
         options: [
             " تحديد عدد الأسئلة عشوائيًا   ",
             " ضمان تغطية جميع أجزاء المنهج  ",
@@ -384,6 +404,7 @@
         ],
         correct: 1
     }
+
 ];
 
         let current = 0;

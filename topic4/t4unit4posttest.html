@@ -375,8 +375,7 @@
             <a href="t4unit4activity.html" class="edu-item"><span class="edu-icon">🧩</span><span class="edu-text">النشاط التعليمي</span></a>
             <a href="#" class="edu-item"><span class="edu-icon">📌</span><span class="edu-text">ملخص الوحدة</span></a>
             <a href="#" class="edu-item"><span class="edu-icon">🏆</span><span class="edu-text">الاختبار البعدي</span></a>
-
-            <a href="t4unit5.html" class="edu-item locked" id="unit2Btn">
+            <a href="abstract t4unit5.html" class="edu-item locked" id="unit2Btn">
                 <span class="edu-icon" id="unit2Icon">🔒</span>
                 <span class="edu-text" id="unit2BtnText">الوحدة الخامسة</span>
             </a>
@@ -392,7 +391,7 @@
             <div id="quizContent">
                 <div class="quiz-progress-wrap">
                     <div class="quiz-progress-info">
-                        <span id="qCounter">السؤال 1 من 2</span>
+                        <span id="qCounter">السؤال 1 من 3</span>
                         <span id="qPercent">0%</span>
                     </div>
                     <div class="quiz-progress-bar">
@@ -426,7 +425,37 @@
         /* ✏️ الأسئلة — correct = رقم الخيار الصحيح (0=أ، 1=ب، 2=ج، 3=د) */
        const questions = [
     {
-        text: "1. الخطوة الأولى لاستيراد بيانات من ملف Word أو PDF إلى التطبيق......  ",
+        text: "1. أي خيار يتم البحث عنه لبدء عملية الاستيراد؟",
+        options: [
+            "مشاركة",
+            "استيراد (Import)",
+            "إعدادات",
+            "معاينة"
+        ],
+        correct: 1
+    },
+    {
+        text: "2. ما الزر المستخدم لتحديد الملف من جهازك؟",
+        options: [
+            "إرسال",
+            "Browse أو اختيار ملف",
+            "حفظ",
+            "مشاركة"
+        ],
+        correct: 1
+    },
+    {
+        text: "3. بعد اختيار الملف، يتم الضغط على ....................",
+        options: [
+            "حذف",
+            "تحميل (Upload)",
+            "إلغاء",
+            "طباعة"
+        ],
+        correct: 1
+    },
+    {
+        text: "4. الخطوة الأولى لاستيراد بيانات من ملف Word أو PDF إلى التطبيق......  ",
         options: [
             "تحميل الملف   ",
             "تسجيل الدخول إلى التطبيق  ",
@@ -436,7 +465,7 @@
         correct: 1
     },
     {
-        text: "2. نوع الملف الذي يمكن استيراده عادةً إلى التطبيق  ..................... ",
+        text: "5. نوع الملف الذي يمكن استيراده عادةً إلى التطبيق  ..................... ",
         options: [
             " Word وPDF  فقط.              ",
             " Word وExcel  ",

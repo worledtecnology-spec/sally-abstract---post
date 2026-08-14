@@ -311,11 +311,9 @@
             <a href="t4unit3content.html" class="edu-item"><span class="edu-icon">📖</span><span class="edu-text">محتوى الوحدة</span></a>
             <a href="t4unit3selftest.html" class="edu-item"><span class="edu-icon">🧠</span><span class="edu-text">التقويم الذاتي</span></a>
             <a href="t4unit3activity.html" class="edu-item"><span class="edu-icon">🧩</span><span class="edu-text">النشاط التعليمي</span></a>
-             <a href="#" class="edu-item"><span class="edu-icon">📌</span><span class="edu-text">ملخص الوحدة</span></a>
+            <a href="#" class="edu-item"><span class="edu-icon">📌</span><span class="edu-text">ملخص الوحدة</span></a>
             <a href="#" class="edu-item"><span class="edu-icon">🏆</span><span class="edu-text">الاختبار البعدي</span></a>
-
-            <!-- زر الوحدة الثانية — مقفل في البداية -->
-            <a href="t4unit4.html" class="edu-item locked" id="unit2Btn">
+            <a href="abstract t4unit4.html" class="edu-item locked" id="unit2Btn">
                 <span class="edu-icon" id="unit2Icon">🔒</span>
                 <span class="edu-text" id="unit2BtnText">الوحدة الرابعة</span>
             </a>
@@ -359,19 +357,43 @@
         </div>
     </main>
     <script>
-       const questions = [
+      const questions = [
             {
-                text: "1. 	لا يمكن تعديل الأسئلة داخل القالب الجاهز بعد اختياره",
+                text: "1. القالب الجاهز هو نموذج اختبار إلكتروني مُعد مسبقًا يحتوي على تنسيق للأسئلة والإجابات.",
+                options: ["√ صحيح", "× خطأ"],
+                correct: 0
+            },
+            {
+                text: "2. استخدام القوالب الجاهزة يتطلب البدء في تصميم الاختبار من الصفر.",
                 options: ["√ صحيح", "× خطأ"],
                 correct: 1
             },
             {
-                text: "2.	عند استخدام قالب جاهز، يجب مشاركة الاختبار مع جميع المستخدمين دون قيود ",
+                text: "3. من فوائد القوالب الجاهزة توفير الوقت والجهد عند إعداد الاختبارات.",
+                options: ["√ صحيح", "× خطأ"],
+                correct: 0
+            },
+            {
+                text: "4. توفر القوالب الجاهزة مظهرًا احترافيًا وتنظيمًا متناسقًا للاختبار.",
+                options: ["√ صحيح", "× خطأ"],
+                correct: 0
+            },
+            {
+                text: "5. يمكن إعادة استخدام القالب الجاهز في المستقبل مع تعديلات بسيطة.",
+                options: ["√ صحيح", "× خطأ"],
+                correct: 0
+            },
+            {
+                text: "3. 	لا يمكن تعديل الأسئلة داخل القالب الجاهز بعد اختياره",
+                options: ["√ صحيح", "× خطأ"],
+                correct: 1
+            },
+            {
+                text: "4.	عند استخدام قالب جاهز، يجب مشاركة الاختبار مع جميع المستخدمين دون قيود ",
                 options: ["√ صحيح", "× خطأ"],
                 correct: 0
             }
         ];
-
         let current = 0;
         let answers = new Array(questions.length).fill(null);
 
